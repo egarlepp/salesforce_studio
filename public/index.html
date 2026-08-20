@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Studio</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Salesforce Studio</h1>
+    <nav class="tabs" id="nav-tabs">
+      <button class="tab-btn" data-view="connect">Connect</button>
+      <button class="tab-btn" data-view="configure">Configuration</button>
+      <button class="tab-btn" data-view="results">Generate / Results</button>
+      <button class="tab-btn" data-view="history">Run History</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="view-connect" class="view">
+      <h2>Connect to Salesforce</h2>
+      <div id="connect-status">Checking connection&hellip;</div>
+    </section>
+
+    <section id="view-configure" class="view hidden">
+      <h2>Configuration</h2>
+      <div id="config-status" class="hint"></div>
+      <form id="config-form"></form>
+    </section>
+
+    <section id="view-results" class="view hidden">
+      <h2>Generate / Results</h2>
+      <div id="results-container">
+        <p class="hint">Set up your configuration, then generate data from the Configuration tab.</p>
+      </div>
+    </section>
+
+    <section id="view-history" class="view hidden">
+      <h2>Run History</h2>
+      <div id="history-list"></div>
+      <div id="history-detail"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span id="app-version">Salesforce Studio</span>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/connect.js"></script>
+  <script src="/js/configForm.js"></script>
+  <script src="/js/generate.js"></script>
+  <script src="/js/runHistory.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
